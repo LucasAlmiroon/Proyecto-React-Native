@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
 import React, { useState } from 'react'
 
-const Cronometro = () => {
+const Cronometro = ({ navigation }) => {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [customInterval, setCustomInterval] = useState(null);
@@ -55,7 +55,7 @@ const Cronometro = () => {
             <View style={styles.botones}>
                 <Button title='Empezar' onPress={startCronometro} color="orange"></Button>
                 <Button title='Frenar' onPress={stopCronometro} color="orange"></Button>
-                <Button title='Borrar' onPress={clearCronometro} color="orange"></Button>
+                <Button title='Reiniciar' onPress={clearCronometro} color="orange"></Button>
             </View>
         </View>
     )

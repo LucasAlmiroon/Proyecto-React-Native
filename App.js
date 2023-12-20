@@ -1,19 +1,16 @@
-import { useState } from "react"
-import { View, Text, StyleSheet, TextInput, Button, FlatList, Modal, Pressable } from "react-native"
-import Header from "./components/Header"
-import Home from "./components/Home"
-import Cronometro from "./components/Cronometro"
+import { StyleSheet } from "react-native"
+import { StatusBar } from "expo-status-bar"
+import Navigator from "./navigation/Navigator"
 
 
 const App = () => {
-  const [menu, setMenu] = useState("")
+  return (
+    <>
+      <StatusBar />
+      <Navigator />
+    </>
 
-  return <View>
-    <Header title={"My gym"} menu={menu} setMenu={setMenu} />
-    {menu === "cronometro" ? <Cronometro /> :
-      <Home setMenu={setMenu} />}
-
-  </View>
+  )
 }
 const styles = StyleSheet.create({
   container: {
