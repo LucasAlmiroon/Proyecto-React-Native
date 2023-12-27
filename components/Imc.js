@@ -1,7 +1,7 @@
-import { Button, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useState } from 'react';
 
-const Imc = ({ navigation }) => {
+const Imc = ({ }) => {
     const [imc, setImc] = useState();
     const [centimetros, setCentimetros] = useState();
     const [edad, setEdad] = useState();

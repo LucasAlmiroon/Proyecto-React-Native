@@ -1,10 +1,9 @@
 import { Text, View, StyleSheet, Pressable } from 'react-native'
 import { useFonts } from 'expo-font'
 
-const Header = ({ title, inicio }) => {
+const Header = ({ title }) => {
     const [fontsLoaded] = useFonts({ Sriracha: require('../assets/fonts/JosefinSans-Bold.ttf') })
 
-    /*{inicio ? <Pressable style={styles.boton} onPress={() => navigation.navigate('Home')}><Text>Back to home</Text></Pressable> : null}*/
     return (
         <View style={styles.container}>
             <Text style={styles.texto}>{title}</Text>

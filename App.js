@@ -1,13 +1,17 @@
 import { StyleSheet } from "react-native"
 import { StatusBar } from "expo-status-bar"
-import Navigator from "./navigation/Navigator"
+import TabNavigator from "./navigation/TabNavigator"
+import { store } from './app/store'
+import { Provider } from 'react-redux'
 
 
 const App = () => {
   return (
     <>
       <StatusBar />
-      <Navigator />
+      <Provider store={store}>
+        <TabNavigator />
+      </Provider>
     </>
 
   )

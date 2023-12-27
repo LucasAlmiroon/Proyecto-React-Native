@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 
-const Rutina = ({ navigation }) => {
+const Rutina = ({ }) => {
     return (
         <View>
             <Text>Rutina</Text>

@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 
-const PesosyRepeticiones = ({ navigation }) => {
+const PesosyRepeticiones = ({ }) => {
     return (
         <View>
             <Text>PesosyRepeticiones</Text>
