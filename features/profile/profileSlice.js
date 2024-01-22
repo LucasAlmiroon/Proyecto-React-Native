@@ -6,7 +6,8 @@ export const profileSlice = createSlice({
     initialState: {
         nombre: 'Lucas',
         apellido: 'Almiron',
-        edad: 0
+        edad: 0,
+        foto: null
     },
     reducers: {
         reemplazarNombre: (state, action) => {
@@ -15,12 +16,15 @@ export const profileSlice = createSlice({
         reemplazarApellido: (state, action) => {
             state.apellido = action.payload
         },
+        reemplazarFoto: (state, action) => {
+            state.foto = action.payload
+        },
         reemplazarEdad: (state, action) => {
             state.edad = action.payload
         }
     }
 })
 
-export const { reemplazarNombre, reemplazarApellido, reemplazarEdad } = profileSlice.actions
+export const { reemplazarNombre, reemplazarApellido, reemplazarFoto, reemplazarEdad } = profileSlice.actions
 
 export default profileSlice.reducer

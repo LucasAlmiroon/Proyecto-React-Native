@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     texto: {
-        fontFamily: 'Sriracha',
+        fontFamily: 'Inter-Black',
         marginTop: 20,
         fontSize: 20
     }

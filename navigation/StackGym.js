@@ -1,14 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Header from "../components/Header"
-import Home from "../components/Home"
-import Cronometro from "../components/Cronometro"
-import Imc from "../components/Imc"
-import Asistencia from '../components/Asistencia'
-import Rutina from '../components/Rutina'
-import PesosyRepeticiones from '../components/PesosyRepeticiones'
-import Sugerencias from '../components/Sugerencias'
-import EditProfile from '../components/EditProfile'
+import Home from "../screen/Home"
+import Cronometro from "../screen/Cronometro"
+import Imc from "../screen/Imc"
+import Asistencia from '../screen/Asistencia'
+import Rutina from '../screen/Rutina'
+import PesosyRepeticiones from '../screen/PesosyRepeticiones'
+import Sugerencias from '../screen/Sugerencias'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const StackGym = () => {
@@ -35,7 +34,6 @@ const StackGym = () => {
             <Stack.Screen name="PesosyRepeticiones" component={PesosyRepeticiones} />
             <Stack.Screen name="Rutina" component={Rutina} />
             <Stack.Screen name="Sugerencias" component={Sugerencias} />
-            <Stack.Screen name="EditProfile" component={EditProfile} />
         </Stack.Navigator>
     )
 }

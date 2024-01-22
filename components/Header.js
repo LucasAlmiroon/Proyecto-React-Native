@@ -1,9 +1,6 @@
 import { Text, View, StyleSheet, Pressable } from 'react-native'
-import { useFonts } from 'expo-font'
 
 const Header = ({ title }) => {
-    const [fontsLoaded] = useFonts({ Sriracha: require('../assets/fonts/JosefinSans-Bold.ttf') })
-
     return (
         <View style={styles.container}>
             <Text style={styles.texto}>{title}</Text>
@@ -17,7 +14,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: "orange",
         width: "100%",
-        height: 150,
+        height: 100,
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -25,8 +22,7 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start'
     },
     texto: {
-        fontFamily: 'Sriracha',
-        marginTop: 20,
+        fontFamily: 'Inter-Black',
         fontSize: 30
     }
 })

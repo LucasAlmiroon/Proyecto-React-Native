@@ -1,16 +1,23 @@
-import { StyleSheet } from "react-native"
-import { StatusBar } from "expo-status-bar"
-import TabNavigator from "./navigation/TabNavigator"
+import { StyleSheet, StatusBar } from "react-native"
 import { store } from './app/store'
 import { Provider } from 'react-redux'
+import { useFonts } from 'expo-font'
+import MainNavigation from "./navigation/MainNavigation"
 
 
 const App = () => {
+  const [fontsLoaded] = useFonts({
+    'Inter-Black': require('./assets/fonts/JosefinSans-Bold.ttf'),
+  });
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <>
       <StatusBar />
       <Provider store={store}>
-        <TabNavigator />
+        <MainNavigation />
       </Provider>
     </>
 

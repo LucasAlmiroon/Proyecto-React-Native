@@ -1,0 +1,102 @@
+[
+    {
+        "id": 0,
+        "nombreEjercicio": "Press de banca",
+        "grupoMuscular": "Pectorales"
+    },
+    {
+        "id": 1,
+        "nombreEjercicio": "Sentadillas",
+        "grupoMuscular": "Piernas"
+    },
+    {
+        "id": 2,
+        "nombreEjercicio": "Dominadas",
+        "grupoMuscular": "Espalda"
+    },
+    {
+        "id": 3,
+        "nombreEjercicio": "Fondos en paralelas",
+        "grupoMuscular": "Tríceps"
+    },
+    {
+        "id": 4,
+        "nombreEjercicio": "Elevaciones laterales",
+        "grupoMuscular": "Hombros"
+    },
+    {
+        "id": 5,
+        "nombreEjercicio": "Curl de bíceps",
+        "grupoMuscular": "Bíceps"
+    },
+    {
+        "id": 6,
+        "nombreEjercicio": "Peso muerto",
+        "grupoMuscular": "Espalda y Piernas"
+    },
+    {
+        "id": 7,
+        "nombreEjercicio": "Plancha",
+        "grupoMuscular": "Abdominales"
+    },
+    {
+        "id": 8,
+        "nombreEjercicio": "Zancadas",
+        "grupoMuscular": "Piernas"
+    },
+    {
+        "id": 9,
+        "nombreEjercicio": "Pull-ups",
+        "grupoMuscular": "Espalda"
+    },
+    {
+        "id": 10,
+        "nombreEjercicio": "Flexiones",
+        "grupoMuscular": "Pectorales"
+    },
+    {
+        "id": 11,
+        "nombreEjercicio": "Tríceps en polea alta",
+        "grupoMuscular": "Tríceps"
+    },
+    {
+        "id": 12,
+        "nombreEjercicio": "Press militar",
+        "grupoMuscular": "Hombros"
+    },
+    {
+        "id": 13,
+        "nombreEjercicio": "Curl martillo",
+        "grupoMuscular": "Bíceps"
+    },
+    {
+        "id": 14,
+        "nombreEjercicio": "Crunches",
+        "grupoMuscular": "Abdominales"
+    },
+    {
+        "id": 15,
+        "nombreEjercicio": "Hip Thrust",
+        "grupoMuscular": "Glúteos"
+    },
+    {
+        "id": 16,
+        "nombreEjercicio": "Remo con barra",
+        "grupoMuscular": "Espalda"
+    },
+    {
+        "id": 17,
+        "nombreEjercicio": "Extensiones de cuádriceps",
+        "grupoMuscular": "Piernas"
+    },
+    {
+        "id": 18,
+        "nombreEjercicio": "Dips",
+        "grupoMuscular": "Tríceps"
+    },
+    {
+        "id": 19,
+        "nombreEjercicio": "Elevación frontal",
+        "grupoMuscular": "Hombros"
+    }
+]

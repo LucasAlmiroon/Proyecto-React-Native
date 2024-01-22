@@ -1,0 +1,1 @@
+export const base_url = "https://proyecto-gymapp-default-rtdb.firebaseio.com/"

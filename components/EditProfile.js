@@ -1,31 +1,47 @@
-import { StyleSheet, TextInput, View, Text, Button } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import { useState } from 'react';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { reemplazarNombre, reemplazarApellido, reemplazarEdad } from '../features/profile/profileSlice'
+import InputForm from './InputForm';
+import SubmitButton from './SubmitButton';
 
 const EditProfile = ({ navigation }) => {
-    const [nombreInput, setNombreInput] = useState()
-    const [apellidoInput, setApellidoInput] = useState()
-    const [edadInput, setEdadInput] = useState()
+
+    const nombre = useSelector((state) => state.profile.nombre)
+    const apellido = useSelector((state) => state.profile.apellido)
+    const [nombreInput, setNombreInput] = useState(nombre)
+    const [apellidoInput, setApellidoInput] = useState(apellido)
     const dispatch = useDispatch()
+    const reemplazar = () => {
+        if (nombreInput && apellidoInput != '') {
+            dispatch(reemplazarApellido(apellidoInput))
+            dispatch(reemplazarNombre(nombreInput))
+            navigation.navigate('Perfil')
+        } else {
+            console.log('Falta un dato')
+        }
+    }
 
     return (
         <View>
-            <Text>
-                Cambiar Nombre
-            </Text>
-            <TextInput onChangeText={(t) => setNombreInput(t)}></TextInput>
-            <Button title='Aplicar' onPress={() => { dispatch(reemplazarNombre(nombreInput)) }}></Button>
-            <Text>
-                Cambiar Apellido
-            </Text>
-            <TextInput onChangeText={(t) => setApellidoInput(t)}></TextInput>
-            <Button title='Aplicar' onPress={() => { dispatch(reemplazarApellido(apellidoInput)) }}></Button>
-            <Text>
-                Cambiar Edad
-            </Text>
-            <TextInput onChangeText={(t) => setEdadInput(parseInt(t))}></TextInput>
-            <Button title='Aplicar' onPress={() => { dispatch(reemplazarEdad(edadInput)) }}></Button>
+            <SubmitButton
+                onPress={() => navigation.navigate('ImageSelector')}
+                texto="Cambiar foto de perfil"
+            />
+            <InputForm
+                label='Cambiar nombre'
+                value={nombreInput}
+                onChangeText={(t) => setNombreInput(t)}
+                placeholder='Nombre' />
+            <InputForm
+                label='Cambiar apellido'
+                value={apellidoInput}
+                onChangeText={(t) => setApellidoInput(t)}
+                placeholder='Apellido' />
+            <SubmitButton
+                onPress={() => reemplazar()}
+                texto="Aplicar cambios"
+            />
         </View>
     )
 }
@@ -33,6 +49,12 @@ const EditProfile = ({ navigation }) => {
 export default EditProfile
 
 const styles = StyleSheet.create({
-
-
+    boton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10,
+        backgroundColor: 'orange',
+        margin: 10,
+        padding: 10
+    }
 })
