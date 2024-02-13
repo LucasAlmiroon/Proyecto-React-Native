@@ -1,0 +1,65 @@
+Documentación de la Aplicación de Gimnasio
+1. Introducción:
+La Aplicación de Gimnasio es una herramienta diseñada para ayudar a los usuarios a llevar un control detallado de sus actividades relacionadas con el fitness y la salud. Ofrece funcionalidades como control de rutinas, peso, comidas, cronómetro, calculadora de IMC, asistencia, registro de pesos y repeticiones, así como sugerencias alimenticias según el objetivo del usuario. La aplicación está desarrollada utilizando tecnologías como React Native, SQLite, Firebase y Redux.
+
+2. Requisitos del sistema:
+Para utilizar la Aplicación de Gimnasio, se requiere un dispositivo móvil compatible con React Native y un sistema operativo compatible (iOS o Android).
+
+3. Instalación:
+Para instalar la aplicación, siga estos pasos:
+
+Clone el repositorio desde GitHub.
+Abra una terminal y navegue hasta la carpeta del proyecto.
+Ejecute el comando npm install para instalar todas las dependencias necesarias.
+Configure la conexión a Firebase proporcionando las credenciales necesarias en el archivo de configuración.
+4. Estructura del proyecto:
+La estructura del proyecto sigue un enfoque modular, con componentes de React Native, funciones de Redux para el estado global, consultas de SQLite para almacenar datos localmente y Firebase para la autenticación y el almacenamiento de datos en la nube.
+
+markdown
+Copy code
+- src/
+  - components/
+  - screens/
+  - navigation/
+  - redux/
+  - services/
+  - utils/
+5. Arquitectura:
+La aplicación sigue una arquitectura de cliente-servidor, con la lógica de presentación y control de datos separada de la lógica de negocios. Los datos se almacenan localmente usando SQLite para un acceso rápido y se sincronizan con Firebase para permitir el acceso desde múltiples dispositivos.
+
+6. Funcionalidades:
+Control de Rutinas: Permite a los usuarios crear y seguir rutinas de entrenamiento personalizadas.
+Control de Peso: Permite registrar y monitorear el peso corporal a lo largo del tiempo.
+Registro de Comidas: Permite registrar la ingesta de alimentos para un seguimiento detallado de la dieta.
+Cronómetro: Ofrece un cronómetro para realizar seguimiento del tiempo durante los entrenamientos.
+Calculadora de IMC: Calcula el Índice de Masa Corporal (IMC) del usuario.
+Asistencia: Registra la asistencia a sesiones de entrenamiento.
+Registro de Pesos y Repeticiones: Permite registrar el peso utilizado y las repeticiones realizadas durante los ejercicios.
+Rutina Profesional: Visualización de rutinas dadas por profesionales de la salud y el fitness.
+Sugerencias Alimenticias: Proporciona sugerencias de comidas según el objetivo del usuario.
+7. Guía de Uso:
+Inicio de Sesión y Crear Cuenta: Instrucciones para acceder a la aplicación.
+Navegación: Cómo acceder a las diferentes funcionalidades desde el menú principal.
+Edición de Perfil: Cómo editar el perfil del usuario con nombre, apellido y foto.
+8. Capturas de Pantalla o GIFs:
+[Insertar aquí capturas de pantalla o GIFs que muestren la interfaz de usuario y las funcionalidades en acción]
+
+9. Configuración del Perfil:
+Los usuarios pueden editar su perfil desde la sección de perfil en la aplicación. Aquí pueden cambiar su nombre, apellido y foto de perfil según sea necesario.
+
+10. Guía de Contribución:
+Si desea contribuir al proyecto, siga las directrices de contribución establecidas en el repositorio de GitHub. Asegúrese de seguir las convenciones de estilo de código y de informar sobre problemas o errores utilizando el sistema de seguimiento de problemas.
+
+11. Dependencias:
+La aplicación utiliza las siguientes dependencias principales:
+
+React Native
+SQLite
+Firebase
+Redux
+React Navigation
+12. FAQ:
+¿Cómo puedo restablecer mi contraseña?
+Puede restablecer su contraseña desde la pantalla de inicio de sesión utilizando la opción "Olvidé mi contraseña".
+¿Cómo puedo sincronizar mis datos en múltiples dispositivos?
+Sus datos se sincronizan automáticamente a través de Firebase una vez que haya iniciado sesión en la aplicación en varios dispositivos.
