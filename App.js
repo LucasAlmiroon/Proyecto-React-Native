@@ -3,7 +3,11 @@ import { store } from './app/store'
 import { Provider } from 'react-redux'
 import { useFonts } from 'expo-font'
 import MainNavigation from "./navigation/MainNavigation"
+import { init } from './db'
 
+init()
+  .then(() => console.log('DB initializated'))
+  .catch((err) => { console.log(err.message) })
 
 const App = () => {
   const [fontsLoaded] = useFonts({

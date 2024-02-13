@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { useGetExercisesQuery } from '../services/exercisesApi'
+import { useGetExercisesQuery } from '../app/services/exercisesApi'
 
 export const DropdownComponent = () => {
     const [value, setValue] = useState();

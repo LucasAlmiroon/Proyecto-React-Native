@@ -2,8 +2,8 @@ import { StyleSheet, View } from 'react-native'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { reemplazarNombre, reemplazarApellido, reemplazarEdad } from '../features/profile/profileSlice'
-import InputForm from './InputForm';
-import SubmitButton from './SubmitButton';
+import InputForm from '../components/InputForm';
+import SubmitButton from '../components/SubmitButton';
 
 const EditProfile = ({ navigation }) => {
 

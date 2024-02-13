@@ -1,7 +1,7 @@
 import Header from "../components/Header"
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import EditProfile from '../components/EditProfile'
+import EditProfile from '../screen/EditProfile'
 import Profile from '../screen/Profile';
 import ImageSelector from '../screen/ImageSelector';
 

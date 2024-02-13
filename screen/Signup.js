@@ -3,25 +3,30 @@ import InputForm from '../components/InputForm'
 import { useEffect, useState } from 'react'
 import SubmitButton from '../components/SubmitButton'
 import { useSignUpMutation } from '../app/services/authApi'
+import { useDispatch } from 'react-redux'
+import { setToken } from '../features/profile/profileSlice'
 
 const Signup = ({ navigate }) => {
-    const [nombreInput, setNombreInput] = useState('')
-    const [apellidoInput, setApellidoInput] = useState('')
-    const [emailInput, setEmailInput] = useState('')
-    const [passwordInput, setPasswordInput] = useState('')
-    const [triggerSignup, { data, error, isSuccess, isError, isLoading }] = useSignUpMutation()
+    const [nombreInput, setNombreInput] = useState('');
+    const [apellidoInput, setApellidoInput] = useState('');
+    const [emailInput, setEmailInput] = useState('');
+    const [passwordInput, setPasswordInput] = useState('');
+    const dispatch = useDispatch();
+    const [triggerSignup, { data, error, isLoading }] = useSignUpMutation();
 
     useEffect(() => {
-        if (isSuccess) {
-            console.log(data)
-        } if (isError) {
-            console.log(error)
+        if (data) {
+            dispatch(setToken(data.token));
+            navigate('Home');
         }
-    }, [data, isError, isSuccess])
+        if (error) {
+            console.log('Error al registrarse:', error);
+        }
+    }, [data, error, dispatch, navigate]);
 
     const onSubmit = () => {
-        triggerSignup({ emailInput, passwordInput })
-    }
+        triggerSignup({ emailInput, passwordInput });
+    };
 
 
     return (
@@ -47,15 +52,18 @@ const Signup = ({ navigate }) => {
                     label='Contraseña'
                     value={passwordInput}
                     onChangeText={(t) => setPasswordInput(t)}
-                    placeholder='Contraseña' />
+                    placeholder='Contraseña'
+                    secureTextEntry={true} />
                 <InputForm
                     label='Repetir contraseña'
                     value={passwordInput}
                     onChangeText={(t) => setPasswordInput(t)}
-                    placeholder='Contraseña' />
+                    placeholder='Contraseña'
+                    secureTextEntry={true} />
                 <SubmitButton
                     onPress={() => { onSubmit() }}
                     texto="Crear Cuenta"
+                    disabled={isLoading}
                 />
             </View>
         </>
