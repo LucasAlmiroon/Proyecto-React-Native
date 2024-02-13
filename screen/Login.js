@@ -6,7 +6,7 @@ import SubmitButton from '../components/SubmitButton'
 const Login = ({ navigation }) => {
 
     const [emailInput, setEmailInput] = useState('')
-    const [contrasenaInput, setContrasenaInput] = useState('')
+    const [passwordInput, setContrasenaInput] = useState('')
 
     return (
         <>
@@ -18,12 +18,12 @@ const Login = ({ navigation }) => {
                 <Text style={styles.h1}>Sign in</Text>
                 <InputForm
                     label='Email'
-                    value=''
+                    value={emailInput}
                     onChangeText={(t) => setEmailInput(t)}
                     placeholder='Email' />
                 <InputForm
                     label='Contraseña'
-                    value=''
+                    value={passwordInput}
                     onChangeText={(t) => setContrasenaInput(t)}
                     placeholder='Contraseña' />
                 <SubmitButton

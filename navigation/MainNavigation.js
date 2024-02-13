@@ -5,7 +5,7 @@ import { useState } from 'react'
 import TabNavigator from './TabNavigator'
 
 const MainNavigation = () => {
-    const [user, setUser] = useState('a')
+    const [user, setUser] = useState('')
     return (
         <NavigationContainer>
             {user ? <TabNavigator /> : <AuthStack />}
